@@ -1,0 +1,316 @@
+:root {
+  --color-primary-light: #4B83DB;
+  --color-primary: #1e3c72;
+  --color-primary-dark: #0c2d5f;
+  --color-secondary-light: #4B9EDB;
+  --color-secondary: #2a5298;
+  --color-secondary-dark: #1a3f7f;
+  --color-success-light: #10b981;
+  --color-success: #059669;
+  --color-success-dark: #047857;
+  --color-error-light: #ef4444;
+  --color-error: #dc2626;
+  --color-error-dark: #b91c1c;
+  --color-warning-light: #f59e0b;
+  --color-warning: #d97706;
+  --color-warning-dark: #b45309;
+  --color-info-light: #3b82f6;
+  --color-info: #2563eb;
+  --color-info-dark: #1d4ed8;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+  --rounded-sm: 0.125rem;
+  --rounded: 0.25rem;
+  --rounded-md: 0.375rem;
+  --rounded-lg: 0.5rem;
+  --rounded-xl: 0.75rem;
+  --rounded-2xl: 1rem;
+  --rounded-3xl: 1.5rem;
+  --rounded-4xl: 2rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-900);
+}
+
+/* Modern header with gradient and shadow */
+.header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  border-radius: var(--rounded-xl);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #ffffff, rgba(255,255,255,0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheader {
+  font-size: 1.25rem;
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* Enhanced card design */
+.card {
+  background-color: white;
+  border-radius: var(--rounded-xl);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-gray-100);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-gray-100);
+  position: relative;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+  width: 100%;
+}
+
+/* Modern button styles */
+.stButton > button {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--rounded-lg);
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.stButton > button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced form inputs */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stDateInput > div > div > input {
+  border-radius: var(--rounded-lg);
+  border: 1px solid var(--color-gray-200);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stDateInput > div > div > input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1);
+}
+
+/* Chart container improvements */
+.chart-container {
+  background: white;
+  border-radius: var(--rounded-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-gray-100);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Trading signal boxes */
+.signal-box {
+  padding: 1.25rem;
+  border-radius: var(--rounded-lg);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.signal-box-buy {
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-success) 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.signal-box-sell {
+  background: linear-gradient(135deg, var(--color-error-light) 0%, var(--color-error) 100%);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.signal-box-neutral {
+  background: linear-gradient(135deg, var(--color-info-light) 0%, var(--color-info) 100%);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Alert boxes */
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--rounded-lg);
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alert-info {
+  background-color: var(--color-info-light);
+  color: var(--color-info-dark);
+  border-left: 4px solid var(--color-info);
+}
+
+.alert-warning {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning-dark);
+  border-left: 4px solid var(--color-warning);
+}
+
+.alert-error {
+  background-color: var(--color-error-light);
+  color: var(--color-error-dark);
+  border-left: 4px solid var(--color-error);
+}
+
+/* Table improvements */
+.dataframe {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--rounded-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 1rem 0;
+}
+
+.dataframe th {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.dataframe td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.dataframe tr:last-child td {
+  border-bottom: none;
+}
+
+.dataframe tr:nth-child(even) {
+  background-color: var(--color-gray-50);
+}
+
+.dataframe tr:hover td {
+  background-color: var(--color-gray-100);
+}
+
+/* Stock value formatting */
+.stock-value-positive {
+  color: var(--color-success);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--rounded);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.stock-value-negative {
+  color: var(--color-error);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--rounded);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Footer styling */
+footer:after {
+  content: "Stock Market Prediction App © 2024 | Built with Streamlit";
+  visibility: visible;
+  display: block;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  background: linear-gradient(to right, var(--color-gray-50), white, var(--color-gray-50));
+  border-top: 1px solid var(--color-gray-100);
+  margin-top: 3rem;
+}
+
+/* Hide default Streamlit elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Streamlit elements adjustments */
+.css-10trblm {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--color-gray-800);
+  font-weight: 600;
+}
+
+.stRadio > div {
+  padding: 0.75rem;
+  background: white;
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow-sm);
+}
